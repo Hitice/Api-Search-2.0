@@ -1,0 +1,30 @@
+/* search.css */
+.header {
+    margin-bottom: 20px;
+}
+
+.campaign-search {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px; /* Distância entre os elementos */
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Melhorar responsividade e mobilidade */
+@media screen and (max-width: 768px) {
+    .campaign-search {
+        flex-direction: column;
+    }
+}

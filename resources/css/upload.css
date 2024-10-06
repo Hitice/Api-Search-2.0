@@ -1,0 +1,111 @@
+/* upload.css */
+.upload-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilização do grupo de entrada */
+.input-group {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilização do campo de seleção de campanhas e input de texto */
+.input-group select,
+.input-group input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    flex: 1; /* Permite que os elementos ocupem espaço igual */
+    margin-right: 5px; /* Espaço entre o select e o input de texto */
+}
+
+/* Oculta o input de arquivo padrão e estiliza o botão de upload */
+.input-group input[type="file"] {
+    display: none; /* Oculta o input de arquivo padrão */
+}
+
+.custom-file-upload {
+    display: inline-flex;
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #6a1b9a;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Muda a cor do botão de upload ao passar o mouse */
+.custom-file-upload:hover {
+    background-color: #5a0089; /* Muda a cor ao passar o mouse */
+}
+
+/* Alinhamento dos botões */
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Distribui os botões de forma equitativa */
+    margin-top: 15px; /* Espaçamento superior */
+}
+
+/* Estilização do botão de upload */
+.btn-upload {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-upload:hover {
+    background-color: #5a0089; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilização de alertas */
+.alert {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Melhorar responsividade */
+@media screen and (max-width: 768px) {
+    .upload-container {
+        padding: 15px;
+    }
+
+    .btn-upload {
+        padding: 8px 12px;
+    }
+}

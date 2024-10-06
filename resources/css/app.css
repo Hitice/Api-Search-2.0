@@ -1,0 +1,130 @@
+/* app.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #4a4a4a; /* Cinza 70% */
+}
+
+/* Melhorando a responsividade */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background-color: #6a1b9a; /* Roxo */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilo da tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #6a1b9a; /* Roxo */
+    color: white;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botões com mix de roxo e cinza */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-upload {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #4a148c;
+}
+
+.btn-search {
+    background-color: #616161; /* Cinza 70% */
+    color: white;
+}
+
+.btn-search:hover {
+    background-color: #424242;
+}
+
+/* Ajuste para ícones em botões */
+.btn i {
+    margin-right: 8px;
+}
+
+/* Estilo de Loading */
+#loading {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #6a1b9a;
+}
+
+/* Tabela com cabeçalho fixo e responsividade */
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #6a1b9a;
+}
+
+/* Adaptação para mobile */
+@media screen and (max-width: 768px) {
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .header {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+}

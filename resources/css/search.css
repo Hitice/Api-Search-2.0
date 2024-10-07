@@ -1,20 +1,81 @@
-/* search.css */
 .header {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens */
 }
 
 .campaign-search {
-    margin-bottom: 20px;
     display: flex;
-    gap: 10px; /* Distância entre os elementos */
+    gap: 10px;
     align-items: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 250px; /* Largura da caixa de pesquisa */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Tamanho da fonte da caixa de pesquisa */
+}
+
+.btn-search {
+    background-color: #6f42c1; /* Cor de fundo roxa */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Tamanho da fonte do botão de busca */
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.btn-upload {
+    background-color: #6c757d; /* Cor de fundo cinza */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: auto;
+    font-size: 14px; /* Tamanho da fonte do botão de upload */
+}
+
+.table-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    overflow: auto; /* Permite a rolagem horizontal se necessário */
 }
 
 .table {
     width: 100%;
-    margin-top: 20px;
+    table-layout: fixed; /* Define um layout fixo para evitar que as colunas se expandam */
+    border-collapse: collapse;
 }
 
+.table th, .table td {
+    padding: 8px; /* Reduzir o padding para caber mais conteúdo */
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 12px; /* Tamanho da fonte para as células */
+}
+
+/* Fixar cabeçalho */
+.fixed-header thead th {
+    position: sticky; /* Faz o cabeçalho ficar fixo na rolagem */
+    top: 0; /* Ajuste a posição para o topo */
+    background-color: #40345c; /* Cor de fundo do cabeçalho */
+    z-index: 2;
+    font-weight: bold; /* Negrito para melhor visualização */
+    font-size: 14px; /* Aumenta o tamanho da fonte do cabeçalho */
+    padding: 10px; /* Padding para o cabeçalho */
+}
+
+/* Estilizando as células do cabeçalho */
+.table th {
+    border-bottom: 2px solid #513d80;
+}
+
+/* Paginação */
 .pagination-container {
     margin-top: 20px;
     display: flex;
@@ -22,9 +83,61 @@
     align-items: center;
 }
 
-/* Melhorar responsividade e mobilidade */
+.goto-page {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsividade */
 @media screen and (max-width: 768px) {
     .campaign-search {
         flex-direction: column;
+        gap: 5px; /* Menor espaço entre os elementos na versão mobile */
     }
+}
+
+/* Estilo para botões roxos */
+.btn-roxo {
+    background-color: #6f42c1; /* Cor de fundo roxa */
+    color: white; /* Cor do texto em branco */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Padding para botões */
+    border-radius: 5px;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.btn-roxo:hover {
+    background-color: #5a32a1; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para botões de paginação */
+.btn-primary {
+    background-color: #007bff; /* Azul padrão */
+    color: white; /* Cor do texto em branco */
+    padding: 10px 15px; /* Tamanho do padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cinza padrão */
+    color: white; /* Cor do texto em branco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed; /* Indica que não é clicável */
+}
+
+/* Estilo para a lista de campanha */
+#campaign-list {
+    background-color: #6c757d; /* Fundo cinza para a lista de seleção */
+    color: white; /* Cor do texto em branco */
 }

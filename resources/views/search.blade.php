@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="header">
-    <h1>Contatos</h1>
+   
     <div class="campaign-search">
-        <input type="text" id="search-campaign" placeholder="Digite o nome da campanha" class="form-control" list="campaign-list">
+        <input type="text" id="search-campaign" placeholder="Digite o nome da campanha" class="form-control search-input" list="campaign-list">
         <datalist id="campaign-list">
             <option value="all">Todas as Campanhas</option>
             @foreach($campanhas as $campanha)
@@ -20,7 +20,7 @@
 
 <div class="table-responsive">
     <div class="table-wrapper">
-        <table class="table">
+        <table class="table fixed-header">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -30,7 +30,7 @@
                     <th>Endereço</th>
                     <th>Cidade</th>
                     <th>CEP</th>
-                    <th>Data de Nascimento</th>
+                    <th>Dt Nascimento</th>
                     <th>Campanha</th>
                 </tr>
             </thead>
@@ -53,13 +53,15 @@
     </div>
 </div>
 
+
 <div class="pagination-container">
     <div class="page-info">
         Página {{ $contatos->currentPage() }} de {{ $contatos->lastPage() }}
     </div>
     <div>
-        <input type="number" class="goto-page" min="1" max="{{ $contatos->lastPage() }}" placeholder="Ir para página">
-        <button class="btn btn-primary">Ir</button>
+        <input type="number" class="goto-page" id="page-input" min="1" max="{{ $contatos->lastPage() }}" placeholder="Ir para página">
+        <button class="btn btn-primary" id="goto-button">Ir</button>
+
         @if($contatos->onFirstPage())
             <button class="btn btn-secondary" disabled><i class="fas fa-angle-left"></i> Voltar</button>
         @else
@@ -78,6 +80,13 @@
     document.getElementById('search-button').addEventListener('click', function() {
         const campaign = document.getElementById('search-campaign').value;
         window.location.href = `{{ route('contatos.search') }}?campanha=${campaign}`;
+    });
+
+    document.getElementById('goto-button').addEventListener('click', function() {
+        const page = document.getElementById('page-input').value;
+        if (page) {
+            window.location.href = `{{ route('contatos.list') }}?page=${page}`;
+        }
     });
 </script>
 @endsection

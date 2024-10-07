@@ -1,6 +1,9 @@
-import axios from 'axios';
 
-// resources/js/app.js
+
+// Importando o JavaScript do Bootstrap
+import 'bootstrap';
+
+import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', function() {
     const uploadForm = document.getElementById('uploadForm');
@@ -20,15 +23,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // Enviar o formulário usando axios
             const formData = new FormData(uploadForm);
 
+            // Adicionar valores das caixas de seleção ao FormData
+            const checkboxes = uploadForm.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    formData.append(checkbox.name, checkbox.value);
+                }
+            });
+
             axios.post(uploadForm.action, formData)
                 .then(response => {
-                    // Manipular a resposta do servidor
                     console.log('Upload realizado com sucesso:', response.data);
-                    // Aqui você pode redirecionar ou atualizar a página conforme necessário
+                    // Você pode adicionar lógica adicional aqui, como mostrar uma mensagem de sucesso
                 })
                 .catch(error => {
                     console.error('Erro no upload:', error);
-                    // Exibir mensagem de erro se necessário
+                    // Você pode adicionar lógica adicional aqui, como mostrar uma mensagem de erro
                 })
                 .finally(() => {
                     // Esconder a barra de loading e reativar o botão

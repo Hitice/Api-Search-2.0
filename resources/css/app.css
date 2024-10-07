@@ -128,3 +128,7 @@ body {
         padding: 8px 12px;
     }
 }
+/* Remover sublinhados de todos os links */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+}

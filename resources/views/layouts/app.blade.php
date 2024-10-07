@@ -17,22 +17,24 @@
 </head>
 <body>
 
-    <!-- Cabeçalho global -->
-    <header class="header">
+    <!-- Cabeçalho global com fundo cinza claro a médio -->
+    <header class="header" style="background: linear-gradient(to bottom, #f1f1f1, #b0b0b0); padding: 2.5px 0;"> <!-- Reduzido para 2.5px -->
         <div class="container">
-            <h1 class="app-title">Data Upload</h1>
+            <h1 class="app-title" style="color: #333; line-height: 50%;"> <!-- Ajustado para um line-height menor -->
+                <img src="{{ Vite::asset('resources/images/apisearch.png') }}" alt="API Search Logo" width="160" height="95">
+            </h1>
         </div>
     </header>
 
     <!-- Conteúdo principal -->
-    <main class="main-content">
+    <main class="main-content" style="padding: 10px 0;"> <!-- Corrigido o "10pxpx" para "10px" -->
         <div class="container">
             @yield('content')
         </div>
     </main>
 
     <!-- Rodapé fixo -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: #f8f9fa; padding: 5px 0;">
         <div class="container text-center">
             <p>Para suporte, entre em contato: <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a></p>
         </div>

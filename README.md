@@ -13,6 +13,7 @@ A simple Laravel application for managing contacts with CSV file upload and camp
 - **Campaign Management**: Add contacts associated with specific campaigns.
 - **Contact Search**: Filter and display contacts based on selected campaigns.
 - **User-Friendly Interface**: Intuitive and responsive UI for a seamless experience.
+- **ApiRest**: Connect servers avaliable to Get Json data by filter capaign .
 
 ## Technologies Used
 

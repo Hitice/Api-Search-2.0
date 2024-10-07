@@ -2,6 +2,10 @@
 
 A simple Laravel application for managing contacts with CSV file upload and campaign filtering functionality. This app allows users to upload contacts from CSV files, validate phone numbers, and filter contacts based on campaigns.
 
+
+![Captura de tela 2024-10-06 212856](https://github.com/user-attachments/assets/adcf49b1-b7a6-4a3c-9842-ddaff91059ed)
+
+
 ## Features
 
 - **CSV Upload**: Upload contact information from a CSV file, including campaign identifiers.
